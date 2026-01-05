@@ -3,148 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TavernSMP</title>
-    <!-- Tailwind Play CDN for quick setup -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              tavern: "#6b7280",
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TavernSMP</title>
+        <!-- Tailwind Play CDN for quick setup -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  tavern: "#6b7280",
+                },
+              },
             },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body class="bg-slate-50 text-slate-900 antialiased font-serif">
-    <main class="min-h-screen flex items-center">
-      <section class="w-full">
-        <div
-          class="mx-auto max-w-5xl px-6 py-12 grid gap-8 lg:grid-cols-3 lg:items-start"
-        >
-          <div class="lg:col-span-2">
-            <p
-              class="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm mb-4"
-            >
-              Vanilla 1.21.11 • Adults only • Long-term SMP
-            </p>
+          };
+        </script>
+      </head>
+      <body class="bg-slate-50 text-slate-900 antialiased font-serif">
+        <!-- visible decorative background image (Tailwind utilities only) -->
+        <div class="fixed inset-0 -z-10 bg-[url('./assets/images/image.png')] bg-cover bg-center bg-fixed blur-0 scale-100 opacity-95 pointer-events-none" aria-hidden="true"></div>
 
-            <div class="flex items-center">
-              <h1 class="mt-2 text-4xl font-extrabold leading-tight">
-                A chill Minecraft server for grown-ups.
-              </h1>
-              <img
-                src="./assets/images/campfire.gif"
-                alt="Crackling fire."
-                width="150"
-              />
-            </div>
-
-            <p class="mt-4 text-lg leading-relaxed">
-              TavernSMP is a relaxed 18+ vanilla SMP with a friendly, long-term
-              community. We keep it simple: good builds, good chats, and
-              Minecraft that still feels like Minecraft.
-            </p>
-
+        <main class="min-h-screen flex items-center relative z-10">
+          <section class="w-full">
             <div
-              class="mt-6 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0"
+              class="mx-auto max-w-5xl px-6 py-12 grid gap-8 lg:grid-cols-3 lg:items-start"
             >
-              <a
-                class="inline-flex items-center justify-center rounded-md bg-[#6f1d1b] text-white px-4 py-2 text-sm font-semibold shadow-sm hover:opacity-70"
-                href="https://discord.gg/RxDSyv8VMw"
-                target="_blank"
-                >Get Whitelisted</a
-              >
-              <a
-                class="inline-flex items-center justify-center rounded-md border border-slate-200 text-slate-700 px-4 py-2 text-sm hover:bg-slate-50"
-                href="https://map.thetavern-smp.com/"
-                target="_blank"
-                >View Live Map</a
-              >
-            </div>
+              <div class="lg:col-span-2">
+                <!-- white card on large screens only to avoid mobile layout issues -->
+                <div class="lg:bg-white/95 lg:rounded-2xl lg:shadow-xl lg:border lg:border-slate-100 lg:p-8">
+                  <p
+                    class="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm mb-4"
+                  >
+                    Vanilla 1.21.11 • Adults only • Long-term SMP
+                  </p>
 
-            <div
-              class="mt-6 flex flex-wrap gap-2"
-              aria-label="Quality of life tweaks"
-            >
-              <div class="mt-6">
-                <div
-                  class="inline-flex items-center rounded-md bg-white border border-slate-200 p-3 shadow-sm"
-                >
-                  <div class="mr-4">
-                    <div class="text-xs text-slate-500">Server IP</div>
-                    <div
-                      class="text-sm font-mono text-slate-900"
-                      id="server-ip"
+                  <div class="flex items-center">
+                    <h1 class="mt-2 text-4xl font-extrabold leading-tight">
+                      A chill Minecraft server for grown-ups.
+                    </h1>
+                    <img
+                      src="./assets/images/campfire.gif"
+                      alt="Crackling fire."
+                      width="150"
+                    />
+                  </div>
+
+                  <p class="mt-4 text-lg leading-relaxed">
+                    TavernSMP is a relaxed 18+ vanilla SMP with a friendly, long-term
+                    community. We keep it simple: good builds, good chats, and
+                    Minecraft that still feels like Minecraft.
+                  </p>
+
+                  <div
+                    class="mt-6 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0"
+                  >
+                    <a
+                      class="inline-flex items-center justify-center rounded-md bg-[#6f1d1b] text-white px-4 py-2 text-sm font-semibold shadow-sm hover:opacity-70"
+                      href="https://discord.gg/RxDSyv8VMw"
+                      target="_blank"
+                      >Get Whitelisted</a
                     >
-                      thetavern-smp.com
-                    </div>
-                    <div class="text-xs text-slate-400">
-                      Java Edition • 1.21.11
+                    <a
+                      class="inline-flex items-center justify-center rounded-md border border-slate-200 text-slate-700 px-4 py-2 text-sm hover:bg-slate-50"
+                      href="https://map.thetavern-smp.com/"
+                      target="_blank"
+                      >View Live Map</a
+                    >
+                  </div>
+
+                  <div
+                    class="mt-6 flex flex-wrap gap-2"
+                    aria-label="Quality of life tweaks"
+                  >
+                    <div class="mt-6">
+                      <div
+                        class="inline-flex items-center rounded-md bg-white border border-slate-200 p-3 shadow-sm"
+                      >
+                        <div class="mr-4">
+                          <div class="text-xs text-slate-500">Server IP</div>
+                          <div
+                            class="text-sm font-mono text-slate-900"
+                            id="server-ip"
+                          >
+                            thetavern-smp.com
+                          </div>
+                          <div class="text-xs text-slate-400">
+                            Java Edition • 1.21.11
+                          </div>
+                        </div>
+                        <button
+                          class="ml-auto text-sm text-slate-700 hover:text-slate-900"
+                          id="copy-ip"
+                          type="button"
+                        >
+                          Copy
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <button
-                    class="ml-auto text-sm text-slate-700 hover:text-slate-900"
-                    id="copy-ip"
-                    type="button"
-                  >
-                    Copy
-                  </button>
                 </div>
               </div>
+
+              <aside
+                class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm"
+              >
+                <h2 class="text-lg font-semibold mb-3">What we’re about</h2>
+
+                <ul class="list-disc list-inside space-y-2 text-sm text-slate-700">
+                  <li>Vanilla gameplay with a few small QoL tweaks</li>
+                  <li>
+                    Redstone-friendly — farms, technical builds, bedrock breaking
+                  </li>
+                  <li>Long-term world (no constant resets)</li>
+                  <li>Chill, adults-only community</li>
+                </ul>
+
+                <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+                  <div>
+                    <span class="text-slate-500">Version</span>
+                    <div class="font-medium">1.21.11</div>
+                  </div>
+                  <div>
+                    <span class="text-slate-500">Alts</span>
+                    <div class="font-medium">1 per IP</div>
+                  </div>
+                </div>
+
+                <p class="mt-4 text-xs text-slate-500">
+                  Whitelist applications are done through Discord. Most are reviewed
+                  within <strong>2 hours</strong> (sometimes longer).
+                </p>
+              </aside>
             </div>
-          </div>
+          </section>
+        </main>
 
-          <aside
-            class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm"
-          >
-            <h2 class="text-lg font-semibold mb-3">What we’re about</h2>
-
-            <ul class="list-disc list-inside space-y-2 text-sm text-slate-700">
-              <li>Vanilla gameplay with a few small QoL tweaks</li>
-              <li>
-                Redstone-friendly — farms, technical builds, bedrock breaking
-              </li>
-              <li>Long-term world (no constant resets)</li>
-              <li>Chill, adults-only community</li>
-            </ul>
-
-            <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
-              <div>
-                <span class="text-slate-500">Version</span>
-                <div class="font-medium">1.21.11</div>
-              </div>
-              <div>
-                <span class="text-slate-500">Alts</span>
-                <div class="font-medium">1 per IP</div>
-              </div>
-            </div>
-
-            <p class="mt-4 text-xs text-slate-500">
-              Whitelist applications are done through Discord. Most are reviewed
-              within <strong>2 hours</strong> (sometimes longer).
-            </p>
-          </aside>
-        </div>
-      </section>
-    </main>
-
-    <script>
-      // small copy-to-clipboard utility
-      document
-        .getElementById("copy-ip")
-        ?.addEventListener("click", async () => {
-          const ip = document.getElementById("server-ip")?.textContent || "";
-          try {
-            await navigator.clipboard.writeText(ip);
-            alert("Server IP copied: " + ip);
-          } catch (e) {
-            console.log(e);
-            alert("Copy failed — select and copy manually: " + ip);
-          }
-        });
-    </script>
-  </body>
-</html>
+        <script>
+          // small copy-to-clipboard utility
+          document
+            .getElementById("copy-ip")
+            ?.addEventListener("click", async () => {
+              const ip = document.getElementById("server-ip")?.textContent || "";
+              try {
+                await navigator.clipboard.writeText(ip);
+                alert("Server IP copied: " + ip);
+              } catch (e) {
+                console.log(e);
+                alert("Copy failed — select and copy manually: " + ip);
+              }
+            });
+        </script>
+      </body>
+    </html>
